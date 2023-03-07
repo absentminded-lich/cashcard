@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class CashCardController {
 
     @GetMapping("/{id}")
-    public ResponseEntity<String> findById(@PathVariable String id) {
-        return ResponseEntity.ok("{}");
+    public ResponseEntity<CashCard> findById(@PathVariable String id) {
+        CashCard cashCard = new CashCard(100L, 0.0);
+        return ResponseEntity.ok(cashCard);
     }
 }
